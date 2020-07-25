@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--不加 <h1></h1> 的时候才可以改变内容，不然还会出现-->
+    <p id="demo">
+        小老弟！！ 
+    </p>
+    <input id="dem" type="text"><!--设置文本框-->
+<script>
+    function myFunction1()//函数
+    {
+        x=document.getElementById("demo"); //找到元素
+        x.innerHTML="<h1>你怎么肥四啊，小老弟！！</h1>";//要改变内容
+        x.style.color="red";  //改变颜色
+        
+    }
+    function changeImage()
+{
+	element=document.getElementById('myimage') //找到元素
+	if (element.src.match("bulbon"))
+	{
+		element.src="2.gif";//原来的图片
+	}
+	else
+	{
+		element.src="1.gif";//改变后的图片
+	}
+}
+function myFunction2()
+{
+	var x=document.getElementById("dem").value;//定义元素的值
+	if(x==""||isNaN(x)) //如果输入的是空，或者是除数字外其他字符
+	{
+		alert("不是数字");//弹出提示框“不是数字”
+	}
+}
+
+</script>
+<img id="myimage" onclick="changeImage()" src="2.gif" width="300" height="450"><!--找到元素，找到函数，设置原来图片的大小-->
+    <button type="button" onclick="myFunction1()">快点我！</button>
+    <button type="button" onclick="myFunction2()">快来验证一下吧</button>
+</body>
+</html>

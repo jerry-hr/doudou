@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<style>
+    #grad1 {
+    height: 100px;
+	background-color: white; /*浏览器不支持时显示*/
+    /* background-image: linear-gradient(rgb(228, 228, 8), rgb(56, 151, 56));   */    /*上下*/
+    /* background-image: linear-gradient(to bottom left ,red ,yellow);    */    /*左上角到右下角*/
+    /* background-image: linear-gradient(60deg ,red ,yellow); */    /*渐变角度，方向*/
+    /* background-image: linear-gradient(red ,orange,yellow,rgb(74, 196, 74),cyan,blue,purple); */    /*彩虹色*/
+    /* background-image: linear-gradient(red 10%,orange,yellow,rgb(74, 196, 74)50%,cyan,blue ,purple); */  /*调节分布大小%*/
+    background-image: linear-gradient(to  right ,red,orange,yellow,rgb(74, 196, 74),cyan,blue ,purple);  /*竖的背景，添加文本*/
+    /* background-image: linear-gradient(to right,rgba(255,0,0,0),rgba(255,0,0,1)); */   /*透明度*/
+    
+
+}
+#puter
+{
+    background-image: url(renxiang.jpg), url(晚霞.jpg);
+    background-size:500px 600px,100% 100%;
+    background-position:right bottom;    /*图片位置*/
+    background-repeat:no-repeat,no-repeat;
+    padding: 390px;
+   
+}
+div
+{
+    border: 3px solid white;
+    padding: 350px;
+    background-image: url('zhu.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+}
+#div1
+{
+    background-origin: border-box;
+}
+h1
+{
+    color:black;
+    font-size: 50px;
+}
+p
+{
+    color: black;
+    font-size: 50px;
+}
+</style>
+</head>
+<body>
+    <!--定义文本，位置，边缘，颜色，大小，粗体，也可定义字体-->
+    <div id="grad1" style="text-align:center;margin:auto;color:#d618b7;font-size:250px;font-weight:bold;font-family: 隶书;">吃掉彩虹</div>
+    
+<div id="div1"> </div>
+<div id="puter"> 
+<h1><b>前方高能：</b>可爱如猪！</h1>
+<p>天空是蔚蓝色</p>
+<p>落霞与孤鹜齐飞</p>
+</div>
+</body>
+</html>
