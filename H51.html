@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: plum; width: 1000px; height: 800px;" >
+        <h1 style="text-align: center;">实验楼学习教程</h1>
+        <p style="text-align: center;">学习就上<a href="https://www.lanqiao.cn/courses/43/learning/?id=152">实验楼</a></p>
+    <hr/>
+    <p>在实验楼你可以学习的课程有：</p>
+    <ul>
+        <li>HTML5基础课程</li>
+        <li>CSS基础课程</li>
+        <li>LINUX基础课程</li>
+        <li>...</li>
+    </ul>
+    <table border="1" width="500px" height="250px" （text-align="center"）><!--设置表格大小，里面的字体不能调位置-->
+        <caption>
+            <b>不能调字体位置表</b>
+        </caption>
+        <tr>
+            <th>歌名</th><!--居中-->
+            <th>歌词</th>
+            <th>作者</th>
+        </tr>
+        <tr><!--行-->
+            <td>菊花台</td><!--列-->
+            <td>菊花残，满地伤，你的笑容已泛黄</td>
+            <td>周杰伦</td>
+        </tr>
+        <tr>
+            <td>青花瓷</td>
+            <td>天青色等烟雨，而我在等你</td>
+            <td>周杰伦</td>
+        </tr>
+    </table>
+    <table border="1" style="width:500px;height:250px; text-align:center;"><!--设置表格大小，里面的字体可以调位置，居中或靠左右-->
+        <caption>
+            <b>能调字体位置表</b>
+        </caption>
+        <tr>
+            <th>题目</th>
+            <th colspan="2">作者</th> <!--合并列--跨列--数字代表合并的个数>
+            <!--<th>内容</th>-->
+        </tr>
+        <tr>
+            <td>背影</td>
+            <td>朱自清</td>
+            <td>你在这等我，我去买橘子</td>
+        </tr>
+        <tr>
+            <td>阿弥陀佛么么哒</td>
+            <td>大冰</td>
+            <td>愿你既能朝九晚五，也能浪迹天涯</td>
+        </tr>
+    </table>
+    <table border="1" width="500px" height="250px" cellspacing="0"><!--cellspacing是单元格与单元格之间的距离-->
+        <caption>
+            <b>合并行--跨行</b>
+        </caption>
+        <tr>
+            <th>姓名</th>
+            <td>周杰伦</td>
+        </tr>
+        <tr><!--68到75行，td是电话要合并的两个行，要单独写-->
+            <th rowspan="2">电话</th>
+            <td>12345678</td><!--合并-->
+           
+        </tr>
+        <tr>
+            <td>48254325</td><!--合并-->
+        </tr>
+    </div>
+</body>
+</html>

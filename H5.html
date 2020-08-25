@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video width="200" height="100" controls>
+        <source src="hg.mp4" type="video/mp4"><!--将要使用的视频-->
+        <source src="movie.ogg" type="video/ogg"> <!--不知道是什么-->
+      </video>
+    <canvas id="myCanvas" width="200" height="100" style="border: 2px solid red;"></canvas>
+    <script>
+       var c=document.getElementById("myCanvas");
+       var ctx=c.getContext("2d");
+        //ctx.moveTo(0,0); //开始坐标  定义矩形
+        //ctx.lineTo(200,100);//结束坐标
+        //ctx.stroke();
+        ctx.beginPath(); //开始  定义圆
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();//空
+        ctx.font="30px Arial";//字体 大小
+        ctx.fillText("hello world",10,30);//实心
+        ctx.strokeText("hello world",10,50);//空心
+    </script>
+    <img id="scream" src="2.gif" alt="The Scream" width="220" height="277"><p>Canvas:</p>
+    <canvas id="myCanvas" width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>
+    
+    <script>
+    
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    var img=document.getElementById("scream");
+    
+    img.onload = function() {
+        ctx.drawImage(img,10,10);
+    } 
+    </script>
+    <canvas id="myCanvas1"></canvas>
+    <script>
+        var c=document.getElementById("myCanvas1");
+        var ctx=c.getContext("2d");
+        //创建渐变
+        var grd=ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        //填充渐变
+        ctx.fillStyle=grd;
+        ctx.fillRect(10,10,150,80);
+    </script>
+</body>
+</html><
