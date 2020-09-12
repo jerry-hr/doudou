@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: red url(./object/大背景.png) no-repeat fixed center top;
+    }
+    /* 头部区域 */
+    .header {
+      height: 80px;
+      background:rgba(31, 30, 30,.7);
+      /* background-image: url(./image/move1.png); */
+      /* background-repeat: no-repeat; */
+    } 
+    .logo {
+      float: left;
+      /* width: 179px; */
+      height: 80px;
+      /* background-color: red; */
+      margin-left: 100px; 
+    }
+    .nav {
+      float: left;
+      margin-left: 56px;
+      font-size: 40px;
+      margin-top: 14px;
+      color: rgb(245, 163, 10);
+      /* font-weight:80px; */
+    }
+    .search {
+      float: left;
+      width: 800px;
+      height: 60px;
+      /* background-color: #373636; */
+      margin: 10px 50px;
+    }
+    .search input {
+      float: left;
+      width: 675px;
+      height: 60px;
+      border: 1px solid #d553af;
+      border-right: 0;
+      color:rgb(238, 211, 160);
+      font-size: 25px;
+      padding-left: 15px;
+    }
+    .search button {
+      float: left;
+      width: 100px;
+      height: 62px;
+      background-color: red;
+      border: 0;
+      background-image: url(./object/背景.jpg);
+    }
+    .user {
+      float: left;
+      height: 60px;
+      font-size: 30px;
+      color: red;
+      line-height: 42px;
+    }
+    
+    .box1,
+    .box3,
+    .box5 {
+      width: 1300px;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      margin:0 auto;
+      margin-top: 10px;
+    }
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .box1 li {
+      float: left;
+      width: 433.343px;
+      height: 70px;
+      background:rgba(31, 30, 30,.7);
+      font-size: 25px;
+    }
+    .box1 li:hover {
+      background-color: black;
+    }
+    .box2,
+    .box4,
+    .box6 {
+      width: 1300px;
+      height: 300px;
+      /* background:rgba(214, 10, 129, 0.5); */
+      background:rgba(31, 30, 30,.7);
+      line-height: 280px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    .box2 div {
+      float: left;
+      width: 423px;
+      height: 280px;
+      /* background:rgba(214, 10, 129, 0.5); */
+      margin: 8px 5px;
+    }
+    .box2 div img {
+      width: 423px;
+      height: 280px;
+    }
+    .box4 video {
+      width: 315px;
+      height: 280px;
+    }
+    .box2 .aa {
+      position: relative;
+      width: 423px;
+      height: 280px;
+      background-color: #fff;
+    }
+    
+    
+    /* 左右箭头　子绝父相 */
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      width: 20px;
+      height: 30px;
+      background-color:rgba(71, 70, 70, 0.6);
+      text-align: center;
+      line-height: 30px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .prev {
+      left: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    .next {
+      right: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    /* 下面小圆点盒子　子绝父相 */
+  .promo-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 140px;
+    height: 20px;
+    background-color: rgba(255,255,255,.3);
+    margin-left: -70px;
+    border-radius: 10px;
+  }
+  .promo-nav li {
+    float: left;
+    width: 20px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 4px;
+  }
+  .promo-nav .selected {
+    background-color: #ff5000;
+  }
+    .box2 .ab {
+      position: relative;
+      width: 423px;
+      height: 280px;
+      background-color: #fff;
+    }
+    .prev1,
+    .next1 {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      width: 20px;
+      height: 30px;
+      background-color:rgba(71, 70, 70, 0.6);
+      text-align: center;
+      line-height: 30px;
+      color: #fff;
+      text-decoration: none;
+    }
+     .prev1 {
+      left: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    .next1 {
+      right: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    .promo-nav1 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 140px;
+    height: 20px;
+    background-color: rgba(255,255,255,.3);
+    margin-left: -70px;
+    border-radius: 10px;
+  }
+  .promo-nav1 li {
+    float: left;
+    width: 20px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 4px;
+  }
+  .promo-nav1 .selected1 {
+    background-color: #ff5000;
+  }
+    .box2 .ac {
+      position: relative;
+      width: 423px;
+      height: 280px;
+      background-color: #fff;
+    }
+    .prev2,
+    .next2 {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      width: 20px;
+      height: 30px;
+      background-color:rgba(71, 70, 70, 0.6);
+      text-align: center;
+      line-height: 30px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .prev2 {
+      left: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    .next2 {
+      right: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+  .promo-nav2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 140px;
+    height: 20px;
+    background-color: rgba(255,255,255,.3);
+    margin-left: -70px;
+    border-radius: 10px;
+  }
+  .promo-nav2 li {
+    float: left;
+    width: 20px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 4px;
+  }
+  .promo-nav2 .selected2 {
+    background-color: #ff5000;
+  }
+   .box3 li {
+      float: left;
+      width: 325px;
+      height: 70px;
+      background:rgba(31, 30, 30,.7);
+      font-size: 25px;
+    }
+   .box3 li:hover {
+    background-color: black;
+    }
+   .box4 div {
+      position: relative;
+      float: left;
+      width: 315px;
+      height: 280px;
+      /* background:rgba(214, 10, 129, 0.5); */
+      margin: 8px 5px;
+   }
+    .box4 video {
+      width: 315px;
+      height: 280px;
+    }
+   .box4 div img {
+      width: 315px;
+      height: 280px;
+   }
+   .mask {
+      /* 隐藏遮罩层 */
+      display: none;
+      position: absolute;
+      top: 0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.4);
+    }
+   .box4:hover .mask {
+      /* 当鼠标经过时，里面的遮罩层显示出来 */
+      display: block;
+    }
+    .box4 .ad {
+      position: relative;
+      width: 315px;
+      height: 280px;
+      /* background-color: #fff; */
+    }
+    .box4 .ae {
+      position: relative;
+      width: 315px;
+      height: 280px;
+      /* background-color: #fff; */
+    }
+    .box4 .af {
+      position: relative;
+      width: 315px;
+      height: 280px;
+      /* background-color: #fff; */
+    }
+    .box4 .ag {
+      position: relative;
+      width: 315px;
+      height: 280px;
+      background-color: rgba(0,0,0,.4);
+    }
+   .small ul li {
+     float: left;
+     width: 147.5px;
+     height: 130px;
+     /* background-color:rgba(12, 66, 243,.7); */
+     margin: 5px 5px;
+     
+   }
+   .small li a {
+     color: black;
+     margin: 0;
+   }
+   .small li:hover {
+     float: left;
+     background-color: rgba(173, 46, 46, 0.6);
+   }
+   .box5 li {
+      float: left;
+      width: 325px;
+      height: 70px;
+      background:rgba(31, 30, 30,.7);
+      font-size: 25px;
+    
+   }
+   .box5 li:hover {
+    background-color: black;
+   }
+   .box6 li {
+      float: left;
+      width: 315px;
+      height: 280px;
+      /* background:rgba(214, 10, 129, 0.5); */
+      margin: 8px 5px;
+   }
+   .small2 li {
+     float: left;
+     width: 147.5px;
+     height: 130px;
+     /* background-color:rgba(12, 66, 243,.7); */
+     margin: 5px 5px;
+   }
+    .bottom {
+      height: 160px;
+      background:rgba(31, 30, 30,.3);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- <audio src="./object/时间.mp3" autoplay="autoplay"></audio> -->
+  <!-- 头部区域 -->
+  <div class="header">
+    <!--头部logo-->
+      <div class="logo">
+        <img src="./object/mo1.png"/>
+      </div> 
+      <!--导航栏nav-->
+      <div class="nav">
+        电影
+      </div>
+      <!-- 搜索框 search ， 按钮 button ，文本框-->
+      <div class="search">
+        <input type="text" name="label" id="la" value="输入关键词"/>
+        
+        <button></button>
+      </div>
+      <!-- 用户模块 --注册登录头像 -->
+      <div class="user">
+        <img  src="./object/小鸭子2.png"/>
+        jerry
+      </div>
+  </div>
+
+      <div>
+        <ul class="box1">
+          <li ><a href="#">推荐</a></li>
+          <li ><a href="#">VIP抢先看</a></li>
+          <li ><a href="#">免费</a></li>
+        </ul>
+      </div>
+
+      <div class="box2">
+        <div class="aa">
+          <img src="./object/推荐1.jpg"/>
+          <a href="#" class="prev"> &lt; </a>
+          <a href="#" class="next"> &gt; </a>
+          <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <div class="ab">
+          <img src="./object/vip1.png"/>
+          <a href="#" class="prev1"> &lt; </a>
+          <a href="#" class="next1"> &gt; </a>
+          <ul class="promo-nav1">
+            <li class="selected1"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <div class="ac">
+          <img src="./object/免费1.png"/>
+          <a href="#" class="prev2"> &lt; </a>
+          <a href="#" class="next2"> &gt; </a>
+          <ul class="promo-nav2">
+            <li class="selected2"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <ul class="box3">
+          <li ><a href="#">经典片段</a></li>
+          <li ><a href="#">爆笑喜剧</a></li>
+          <li ><a href="#">新闻</a></li>
+          <li ><a href="#">其他</a></li>
+        </ul>
+      </div>
+
+      <div class="box4">
+        <div class="ad">
+          <!-- <div class="mask"></div> -->
+            <video  poster="./object/封面1.png" loop="loop" muted="muted"　 autoplay="autoplay"> <!--  autoplay="autoplay"自动播放  loop="loop"循环播放 muted="muted"静音播放-->
+            <source src="./object/大话.mp4" type="video/mp4"><!--将要使用的视频-->
+            <source src="movie.ogg" type="video/ogg"> <!--不知道是什么-->
+            </video>
+            
+        </div>
+            
+        <div class="ae">
+          <!-- <div class="mask"></div> -->
+            <video controls poster="./object/封面2.png" loop="loop" muted="muted"　 autoplay="autoplay"> 
+            <source src="./object/夏洛.mp4" type="video/mp4" ><!--将要使用的视频-->
+            <source src="movie.ogg" type="video/ogg"> <!--不知道是什么-->
+            </video>
+        </div>
+            
+        <div class="af">
+          <!-- <div class="mask"></div> -->
+            <video  controls poster="./object/封面3.png" loop="loop" muted="muted"　 autoplay="autoplay"> 
+            <source src="./object/疫情.mp4" type="video/mp4"><!--将要使用的视频-->
+            <source src="movie.ogg" type="video/ogg"> <!--不知道是什么-->
+            </video>
+        </div>
+            
+        <div class="ag"></div>
+             
+      </div>
+
+      <div>
+        <ul class="box5">
+          <li ><a href="#">应用盒子</a></li>
+          <li ><a href="#">综艺</a></li>
+          <li ><a href="#">儿童</a></li>
+          <li ><a href="#">动漫</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <ul class="box6">
+          <li >
+            <ul class="small2">
+              <li class="one1"><a href="#"></a></li>
+              <li class="two2"><a href="#"></a></li>
+              <li class="three3"><a href="#"></a></li>
+              <li class="four4"><a href="#"></a></li>
+            </ul>
+          </li>
+          <li ><a href="#"><img src="./object/综艺.png"/></a></li>
+          <li ><a href="#"><img src="./object/儿童.png"/></a></li>
+          <li ><a href="#"><img src="./object/动漫.png"/></a></li>
+        </ul>
+      </div>
+      
+    <div class="bottom"></div>
+</body>
+</html>

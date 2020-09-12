@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--添加canvas元素，设置画布的大小-->
+    <canvas id="mycanvas" width="2000px" height="2000px">
+        对不起，你的浏览器不支持canvas
+      </canvas>
+      <canvas id="mycanvas2" width="2000px" height="2000px">
+        对不起，你的浏览器不支持canvas
+      </canvas>
+      <canvas id="mycanvas3" width="2000px" height="2000px">
+        对不起，你的浏览器不支持canvas
+      </canvas>
+
+  <!--在画布上定位图像并作出一个立体的效果-->
+      <script type="text/javascript">
+        //获取canvas元素
+        var myCanvas = document.getElementById("mycanvas");
+        //获取Context上下文
+        var ctx = myCanvas.getContext("2d");
+        //创建一张图片
+        var image = new Image();
+        //设置图片的路径
+        image.src = "2.gif";
+        //当图片加载完成后
+        image.onload = function () {
+          //输出5张照片
+          for (var i = 0; i < 3; i++) {
+            //参数：（1）绘制的图片  （2）坐标x，（3）坐标y
+            ctx.drawImage(image, 100 + i * 80, 100 + i * 80);
+          }
+        };
+      </script>
+
+<!--在画布上定位图像，并规定图像的宽度和高度-->
+
+
+  <script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas2");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //创建一张图片
+    var image = new Image();
+    //设置图片的路径
+    image.src = "2.gif";
+    //当图片加载完成后
+    image.onload = function () {
+      //绘制图片
+      ctx.drawImage(image, 100, 100, 550, 550);
+    
+    };
+  </script>
+
+<!--剪切图像，并在画布上定位被剪切的部分-->
+
+
+  <script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas3");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //创建一张图片
+    var image = new Image();
+    //设置图片的路径
+    image.src = "2.gif";
+    //当图片加载完成后
+    image.onload = function () {
+      //绘制图片
+      ctx.drawImage(image, 500, 500, 550, 550, 300, 300, 550, 550);
+    };
+  </script>
+</body>
+</html>

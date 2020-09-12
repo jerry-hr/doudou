@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--添加canvas元素，设置画布的大小-->
+    <canvas id="mycanvas" style="width:200;height:100">
+        对不起，你的浏览器不支持canvas
+    </canvas>
+    <canvas id="mycanvas1" style="width:200;height:100">
+        对不起，你的浏览器不支持canvas
+    </canvas>
+    <canvas id="mycanvas2"  width="520px" height="1314px">
+        对不起，你的浏览器不支持canvas
+    </canvas>
+    <canvas id="mycanvas3" width="520px" height="1314px">
+        对不起，你的浏览器不支持canvas
+    </canvas>
+    <canvas id="mycanvas4" width="520px" height="1314px">
+        对不起，你的浏览器不支持canvas
+    </canvas>
+    <canvas id="mycanvas5" width="520px" height="1314px">
+        对不起，你的浏览器不支持canvas
+    </canvas>
+      <script type="text/javascript">
+        var myCanvas = document.getElementById("mycanvas");//找到元素
+        var ctx = myCanvas.getContext("2d"); //创建context对象
+        //设置颜色
+        ctx.fillStyle = "red";
+        //设置矩形的位置和尺寸（位置从 左上角原点坐标开始，尺寸为100*100的矩形）
+        ctx.fillRect(0, 0, 100, 100);//实心
+      </script>
+
+      <!--绘制一条直线-->
+    <script type="text/javascript">
+        //获取canvas元素
+        var myCanvas = document.getElementById("mycanvas1");
+        //获取Context上下文
+        var ctx = myCanvas.getContext("2d");
+        // 开始路径绘制
+        ctx.beginPath();
+        // 设置路径起点，坐标为(20,20)
+        ctx.moveTo(20, 20);
+        // 添加一个(200,200)的新点
+        ctx.lineTo(200, 200);
+        // 设置线宽
+        ctx.lineWidth = 2.0;
+        // 设置线的颜色
+        ctx.strokeStyle = "#CC0000";
+        // 绘制已定义的路径
+        ctx.stroke();
+      </script>
+
+      <!--绘制三角形-->
+<script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas2");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    // 开始路径绘制
+    ctx.beginPath();
+    // 设置路径起点，坐标为(20,20)
+    ctx.moveTo(20, 20);
+    // 添加一个(200,200)的新点
+    ctx.lineTo(200, 200);
+    // 添加一个(400,20)的新点
+    ctx.lineTo(400, 20);
+    //创建从当前点回到起始点的路径
+    ctx.closePath();
+    // 设置线宽
+    ctx.lineWidth = 2.0;
+    // 设置线的颜色
+    ctx.strokeStyle = "#CC0000";
+    // 绘制已定义的路径
+    ctx.stroke();
+  </script>
+
+   <!--绘制矩形-->
+<script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas3");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //绘制矩形
+    ctx.rect(10, 10, 100, 200);
+    //绘制已定义的路径
+    ctx.stroke();
+  </script>
+
+ <!--使用 clearRect() 方法清空给定矩形内的指定像素-->
+ <script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas4");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //绘制矩形
+    ctx.fillRect(10, 10, 100, 200);
+    //清空指定像素
+    ctx.clearRect(20, 20, 50, 50);
+  </script>
+
+<!--绘制圆-->
+<script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas5");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //开始路径绘制
+    ctx.beginPath();
+    //绘制圆
+    ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+    //绘制已定义的路径
+    ctx.stroke();
+  </script>
+
+<!--自定义，半圆，扇形，值小于圆的2就可以，如0.5*Math.PI-->
+<script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //开始路径绘制
+    ctx.beginPath();
+    //绘制圆
+    ctx.arc(100, 75, 50, 0, 0.5 * Math.PI);
+    //闭合
+    ctx.moveTo(100, 125);
+    ctx.lineTo(100, 75);
+    ctx.lineTo(150, 75);
+    //绘制已定义的路径
+    ctx.stroke();
+  </script>
+</body>
+</html>

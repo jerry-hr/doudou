@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--添加canvas元素，设置画布的大小-->
+    <canvas id="mycanvas" width="300px" height="250px">
+        对不起，你的浏览器不支持canvas
+      </canvas>
+  
+      <script type="text/javascript">
+        //获取canvas元素
+        var myCanvas = document.getElementById("mycanvas");
+        //获取Context上下文
+        var ctx = myCanvas.getContext("2d");
+        //绘制实心文本
+        ctx.font="80px Arial";
+        ctx.fillText("Hello Syl!", 100,100);
+                     //相对画布来说，表示xy位置
+        //绘制空心文本
+        ctx.strokeText("Hello Syl!",100,200);
+      </script>
+      
+
+        <!--添加canvas元素，设置画布的大小-->
+    <canvas id="mycanvas2" width="300px" height="200px">
+        对不起，你的浏览器不支持canvas
+      </canvas>
+  
+      <script type="text/javascript">
+        //获取canvas元素
+        var myCanvas = document.getElementById("mycanvas2");
+        //获取Context上下文
+        var ctx = myCanvas.getContext("2d");
+        //画一条线便于展示
+        ctx.strokeStyle = "blue";
+        ctx.moveTo(200, 20); //起始点
+        ctx.lineTo(200, 180);//结束点 设置一条直线
+        ctx.stroke();     //开始绘制
+        //设置大小，字体样式
+        ctx.font = "20px Georgia";
+        //值为start的情况
+        ctx.textAlign = "start";
+         //textAlign 属性使用 textAlign 属性设置或返回文本内容的当前对齐方式。
+         //语法为：ctx.textAlign = "center|end|left|right|start";                
+        ctx.strokeText("Hello Syl!", 200, 20); //空心文本
+        //值为center的情况
+        ctx.textAlign = "center";
+        ctx.strokeText("Hello Syl!", 200, 60);
+        //值为end的情况
+        ctx.textAlign = "end";
+        ctx.strokeText("Hello Syl!", 200, 100);
+        //值为left的情况
+        ctx.textAlign = "left";
+        ctx.strokeText("Hello Syl!", 200, 140);
+        //值为right的情况
+        ctx.textAlign = "right";
+        ctx.strokeText("Hello Syl!", 200, 180);
+      </script>
+
+<!-- alphabetic 表示文本基线是普通的字母基线。默认值。
+  
+top 表示文本基线是 em 方框的顶端。
+
+hanging 表示文本基线是悬挂基线。
+
+middle 表示文本基线是 em 方框的正中。
+
+ideographic 表示文本基线是表意基线。
+
+bottom 表示文本基线是 em 方框的底端。 -->
+
+
+<!--文字的不同位置的显示-->
+<canvas id="mycanvas" width="1314px" height="1314px">
+  对不起，你的浏览器不支持canvas
+</canvas>
+
+<script type="text/javascript">
+  //获取canvas元素
+  var myCanvas = document.getElementById("mycanvas");
+  //获取Context上下文
+  var ctx = myCanvas.getContext("2d");
+  //画一条线便于展示
+  ctx.strokeStyle = "blue";
+  ctx.moveTo(20, 100);
+  ctx.lineTo(1314, 100);
+  ctx.stroke();
+  //设置字体样式
+  ctx.font = "30px Georgia";
+  //值为alphabetic的情况
+  ctx.textBaseline = "alphabetic";
+  ctx.fillText("Hello Syl!", 20, 100);
+  //值为top的情况
+  ctx.textBaseline = "top";
+  ctx.fillText("Hello Syl!", 220, 100);
+  //值为hanging的情况
+  ctx.textBaseline = "hanging";
+  ctx.fillText("Hello Syl!", 420, 100);
+  //值为middle的情况
+  ctx.textBaseline = "middle";
+  ctx.fillText("Hello Syl!", 620, 100);
+  //值为ideographic的情况
+  ctx.textBaseline = "ideographic";
+  ctx.fillText("Hello Syl!", 820, 100);
+  //值为bottom的情况
+  ctx.textBaseline = "bottom";
+  ctx.fillText("Hello Syl!", 1020, 100);
+</script>
+    </body>
+</html>

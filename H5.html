@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <video width="200" height="100" controls>
-        <source src="hg.mp4" type="video/mp4"><!--将要使用的视频-->
+    <video width="1000" height="800" controls>
+        <source src="./image/hg.mp4" type="video/mp4"><!--将要使用的视频-->
         <source src="movie.ogg" type="video/ogg"> <!--不知道是什么-->
       </video>
     <canvas id="myCanvas" width="200" height="100" style="border: 2px solid red;"></canvas>
@@ -19,12 +19,12 @@
         //ctx.stroke();
         ctx.beginPath(); //开始  定义圆
         ctx.arc(95,50,40,0,2*Math.PI);
-        ctx.stroke();//空
+        ctx.stroke();//开始绘制
         ctx.font="30px Arial";//字体 大小
         ctx.fillText("hello world",10,30);//实心
         ctx.strokeText("hello world",10,50);//空心
     </script>
-    <img id="scream" src="2.gif" alt="The Scream" width="220" height="277"><p>Canvas:</p>
+    <img id="scream" src="/image/2.gif" alt="The Scream" width="220" height="277"><p>Canvas:</p>
     <canvas id="myCanvas" width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>
     
     <script>
@@ -47,7 +47,43 @@
         grd.addColorStop(1,"white");
         //填充渐变
         ctx.fillStyle=grd;
-        ctx.fillRect(10,10,150,80);
-    </script>
+        ctx.fillRect(10,10,150,80); //填充颜色，实心
+           </script>
+ <canvas id="mycanvas2" width="520px" height="1314px">
+    对不起，你的浏览器不支持canvas
+  </canvas>
+<!--参数说明：
+
+x0 表示渐变的开始圆的 x 坐标。
+
+y0 表示渐变的开始圆的 y 坐标。
+
+r0 表示开始圆的半径。
+
+x1 表示渐变的结束圆的 x 坐标。
+
+y1 表示渐变的结束圆的 y 坐标。
+
+r1 表示结束圆的半径。-->
+  
+<!--绘制圆渐变-->
+  <script type="text/javascript">
+    //获取canvas元素
+    var myCanvas = document.getElementById("mycanvas2");
+    //获取Context上下文
+    var ctx = myCanvas.getContext("2d");
+    //设置渐变色
+    var gradient = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+    gradient.addColorStop(0, "red");
+    gradient.addColorStop("0.2", "orange");
+    gradient.addColorStop("0.5", "yellow");
+    gradient.addColorStop("0.7", "green");
+    gradient.addColorStop(1, "blue");
+    //填充色为渐变色
+    ctx.fillStyle = gradient;
+    //绘制实心矩形
+    ctx.fillRect(10, 10, 190, 150);
+  </script>
+  
 </body>
-</html><
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video  id="vid1" width="1000" height="800" controls poster="雪山.jpg"><!--poster设置视频封面-->
+        <source src="hg.mp4" type="video/mp4"><!--将要使用的视频-->
+        <source src="movie.ogg" type="video/ogg"> <!--不知道是什么-->
+    </video>
+                                <!--显示控件，播放键-->
+      <audio src="入梦也.mp3" controls="controls" loop></audio><!--loop是循环播放-->
+      <script>
+          myVid=document.getElementById("vid1");
+          function addNewTextTrack()
+          {
+              text1=myVid.addNewTextTrack("caption");
+              text1.addCue(new TextTrackCue("Test text", 01.000, 04.000,"","","",true));
+          }
+      </script>
+      <p>Video courtesy of <a href="https://v.youku.com/v_show/id_XMTA3MDAzMDM2.html?tpa=dW5pb25faWQ9MTAyMjEzXzEwMDAwNl8wMV8wMQ&from=360sousuo&refer=TPA_market.qrwang_00002949_000000_rqqQRb_18111600" target="_blank">z仙剑奇侠传三</a>.</p>
+</body>
+</html>
