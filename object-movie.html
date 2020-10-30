@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    /* 第一步就要写，清除边缘 */
     * {
       margin: 0;
       padding: 0;
     }
     body {
-      background: red url(./object/大背景.png) no-repeat fixed center top;
+      background: red url(./object/family.jpg) no-repeat fixed center top;
     }
     /* 头部区域 */
     .header {
@@ -19,6 +20,7 @@
       /* background-image: url(./image/move1.png); */
       /* background-repeat: no-repeat; */
     } 
+    /* 设置logo 大小 */
     .logo {
       float: left;
       /* width: 179px; */
@@ -26,6 +28,7 @@
       /* background-color: red; */
       margin-left: 100px; 
     }
+    /* 导航栏，这里没用到 */
     .nav {
       float: left;
       margin-left: 56px;
@@ -34,13 +37,15 @@
       color: rgb(245, 163, 10);
       /* font-weight:80px; */
     }
+    /* 搜索框的底盒子 */
     .search {
       float: left;
       width: 800px;
       height: 60px;
       /* background-color: #373636; */
-      margin: 10px 50px;
+      margin: 10px 50px; 
     }
+    /* 搜索框左盒子设置大小边框 */
     .search input {
       float: left;
       width: 675px;
@@ -51,20 +56,22 @@
       font-size: 25px;
       padding-left: 15px;
     }
+    /* 搜索 按钮 设置 */
     .search button {
       float: left;
       width: 100px;
       height: 62px;
       background-color: red;
-      border: 0;
+      border: 0;    /* 按钮设置好后，自带边框，要清除边框 */
       background-image: url(./object/背景.jpg);
     }
+    /* 头像，用户登录 */
     .user {
       float: left;
+      width: 300px;
       height: 60px;
-      font-size: 30px;
-      color: red;
-      line-height: 42px;
+      color: rgb(255, 251, 0);
+      margin-top: 10px;
     }
     
     .box1,
@@ -77,9 +84,11 @@
       margin:0 auto;
       margin-top: 10px;
     }
+    /* 所有的无序列表都没有小圆点 */
     li {
       list-style: none;
     }
+    /* 所有的链接都没有下划线，字是白色 */
     a {
       text-decoration: none;
       color: white;
@@ -91,6 +100,7 @@
       background:rgba(31, 30, 30,.7);
       font-size: 25px;
     }
+    /* 当鼠标经过时，变黑色 */
     .box1 li:hover {
       background-color: black;
     }
@@ -113,24 +123,43 @@
       /* background:rgba(214, 10, 129, 0.5); */
       margin: 8px 5px;
     }
+    /* 第二个盒子里的图片强制和div一样大 */
     .box2 div img {
       width: 423px;
       height: 280px;
     }
+    /* 设置是视频的大小 */
     .box4 video {
       width: 315px;
       height: 280px;
     }
+    /*  父盒子 aa盒子 */
     .box2 .aa {
-      position: relative;
+
+      position: relative; /*相对定位 */
       width: 423px;
       height: 280px;
       background-color: #fff;
     }
+    .img1{
+            display: block;
+        }
+     .img2{
+            display: none;
+        }
+    .img3{
+            display: none;
+        }
+    .img4{
+            display: none;
+        }
+    .img5{
+            display: none;
+        }
     
     
     /* 左右箭头　子绝父相 */
-    .prev,
+    .prev,/*左右小箭头相同属性设置*/
     .next {
       position: absolute;
       top: 50%;
@@ -172,6 +201,7 @@
     border-radius: 50%;
     margin: 4px;
   }
+  /* 当前选择的颜色 */
   .promo-nav .selected {
     background-color: #ff5000;
   }
@@ -181,6 +211,22 @@
       height: 280px;
       background-color: #fff;
     }
+    .img6{
+            display: block;
+        }
+    .img7{
+            display: none;
+        }
+    .img8{
+            display: none;
+        }
+    .img9{
+            display: none;
+        }
+    .img10{
+            display: none;
+        }
+
     .prev1,
     .next1 {
       position: absolute;
@@ -231,6 +277,21 @@
       height: 280px;
       background-color: #fff;
     }
+    .img11{
+            display: block;
+        }
+    .img12{
+            display: none;
+        }
+    .img13{
+            display: none;
+        }
+    .img14{
+            display: none;
+        }
+    .img15{
+            display: none;
+        }
     .prev2,
     .next2 {
       position: absolute;
@@ -407,8 +468,8 @@
       </div>
       <!-- 用户模块 --注册登录头像 -->
       <div class="user">
-        <img  src="./object/小鸭子2.png"/>
-        jerry
+        <div style="width: 60px;float: left;"><a href="reg.html"><img  src="./object/小鸭子2.png"/></a></div>
+        <div style="width: 200px;float: left;font-size: 30px;margin: 10px 20px;"><a href="#">登录</a>/<a href="reg.html">注册</a></div>
       </div>
   </div>
 
@@ -422,8 +483,12 @@
 
       <div class="box2">
         <div class="aa">
-          <img src="./object/推荐1.jpg"/>
-          <a href="#" class="prev"> &lt; </a>
+          <a href="objectmovie1.html"><img class="img-slide img1" src="./object/推荐1.jpg"/></a>
+          <a href=""><img class="img-slide img2" src="./object/推荐2.jpeg"/</a>
+          <a href=""><img class="img-slide img3" src="./object/推荐3.jpg"/></a>
+          <a href=""><img class="img-slide img4" src="./object/推荐4.jpg"/></a>
+          <a href=""><img class="img-slide img5" src="./object/推荐5.png"/></a>
+          <!-- <a href="#" class="prev"> &lt; </a>
           <a href="#" class="next"> &gt; </a>
           <ul class="promo-nav">
             <li class="selected"></li>
@@ -431,12 +496,17 @@
             <li></li>
             <li></li>
             <li></li>
-          </ul>
+          </ul> -->
         </div>
 
         <div class="ab">
-          <img src="./object/vip1.png"/>
-          <a href="#" class="prev1"> &lt; </a>
+          <img class="img-second img6" src="./object/vip1.png"/>
+          <img class="img-second img7" src="./object/vip2.png"/>
+          <img class="img-second img8" src="./object/vip3.png"/>
+          <img class="img-second img9" src="./object/vip4.png"/>
+          <img class="img-second img10" src="./object/vip5.png"/>
+
+          <!-- <a href="#" class="prev1"> &lt; </a>
           <a href="#" class="next1"> &gt; </a>
           <ul class="promo-nav1">
             <li class="selected1"></li>
@@ -444,12 +514,17 @@
             <li></li>
             <li></li>
             <li></li>
-          </ul>
+          </ul> -->
         </div>
 
         <div class="ac">
-          <img src="./object/免费1.png"/>
-          <a href="#" class="prev2"> &lt; </a>
+          <img class="img-three img11" src="./object/免费1.png"/>
+          <img class="img-three img12" src="./object/免费2.png"/>
+          <img class="img-three img13" src="./object/免费3.png"/>
+          <img class="img-three img14" src="./object/免费4.png"/>
+          <img class="img-three img15" src="./object/免费5.png"/>
+
+          <!-- <a href="#" class="prev2"> &lt; </a> 
           <a href="#" class="next2"> &gt; </a>
           <ul class="promo-nav2">
             <li class="selected2"></li>
@@ -457,7 +532,7 @@
             <li></li>
             <li></li>
             <li></li>
-          </ul>
+          </ul>-->
         </div>
       </div>
 
@@ -527,4 +602,53 @@
       
     <div class="bottom"></div>
 </body>
+<script type="text/javascript">
+  var index=0;
+  //改变图片
+  function ChangeImg() {
+      index++;
+      var a=document.getElementsByClassName("img-slide");
+      if(index>=a.length) index=0;
+      for(var i=0;i<a.length;i++){
+          a[i].style.display='none';
+      }
+      a[index].style.display='block';
+  }
+  //设置定时器，每隔两秒切换一张图片
+  setInterval(ChangeImg,2000);
+</script>
+
+
+<script type="text/javascript">
+  var index=0;
+  //改变图片
+  function ChangeImg() {
+      index++;
+      var a=document.getElementsByClassName("img-second");
+      if(index>=a.length) index=0;
+      for(var i=0;i<a.length;i++){
+          a[i].style.display='none';
+      }
+      a[index].style.display='block';
+  }
+  //设置定时器，每隔两秒切换一张图片
+  setInterval(ChangeImg,1500);
+</script>
+
+
+<script type="text/javascript">
+  var index=0;
+  //改变图片
+  function ChangeImg() {
+      index++;
+      var a=document.getElementsByClassName("img-three");
+      if(index>=a.length) index=0;
+      for(var i=0;i<a.length;i++){
+          a[i].style.display='none';
+      }
+      a[index].style.display='block';
+  }
+  //设置定时器，每隔两秒切换一张图片
+  setInterval(ChangeImg,3000);
+</script>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 第一步就要写，清除边缘 */
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          background-color: rgba(5, 5, 5,.8);
+        }
+        /* 头部区域 */
+        .header {
+          height: 80px;
+          background:rgba(31, 30, 30,.7);
+          /* background-image: url(./image/move1.png); */
+          /* background-repeat: no-repeat; */
+        } 
+        /* 设置logo 大小 */
+        .logo {
+          float: left;
+          /* width: 179px; */
+          height: 80px;
+          /* background-color: red; */
+          margin-left: 100px; 
+        }
+        /* 导航栏，这里没用到 */
+        .nav {
+          float: left;
+          margin-left: 56px;
+          font-size: 40px;
+          margin-top: 14px;
+          color: rgb(245, 163, 10);
+          /* font-weight:80px; */
+        }
+        /* 搜索框的底盒子 */
+        .search {
+          float: left;
+          width: 800px;
+          height: 60px;
+          /* background-color: #373636; */
+          margin: 10px 50px; 
+        }
+        /* 搜索框左盒子设置大小边框 */
+        .search input {
+          float: left;
+          width: 675px;
+          height: 60px;
+          border: 1px solid #d553af;
+          border-right: 0;
+          color:rgb(238, 211, 160);
+          font-size: 25px;
+          padding-left: 15px;
+        }
+        /* 搜索 按钮 设置 */
+        .search button {
+          float: left;
+          width: 100px;
+          height: 62px;
+          background-color: red;
+          border: 0;    /* 按钮设置好后，自带边框，要清除边框 */
+          background-image: url(./object/背景.jpg);
+        }
+        /* 头像，用户登录 */
+        .user {
+          float: left;
+          width: 300px;
+          height: 60px;
+          color: rgb(255, 251, 0);
+          margin-top: 10px;
+        }
+        .user div a {
+            color:yellow;
+        }
+        a {
+            text-decoration: none;
+        }
+        .mov {
+            width: 400px;
+            height: 400px;
+            background-color:blue;
+        }
+        
+      </style>
+</head>
+<body>
+    <div class="header">
+        <!--头部logo-->
+          <div class="logo">
+            <img src="./object/mo1.png"/>
+          </div> 
+          <!--导航栏nav-->
+          <div class="nav">
+            电影
+          </div>
+          <!-- 搜索框 search ， 按钮 button ，文本框-->
+          <div class="search">
+            <input type="text" name="label" id="la" value="输入关键词"/>
+            
+            <button></button>
+          </div>
+          <!-- 用户模块 --注册登录头像 -->
+          <div class="user">
+            <div style="width: 60px;float: left;"><a href="reg.html"><img  src="./object/小鸭子2.png"/></a></div>
+            <div style="width: 200px;float: left;font-size: 30px;margin: 10px 20px;"><a href="#">登录&nbsp;</a>/&nbsp; <a href="reg.html">注册</a></div>
+          </div>
+      </div>
+    <cdiv class="mov">
+        <div class="mov1">
+            <img src="object/推荐1.jpg" alt="" width="1200" >
+        </div>
+    </div>
+</body>
+</html>
