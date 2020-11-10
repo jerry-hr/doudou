@@ -1,0 +1,445 @@
+
+    /* 第一步就要写，清除边缘 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background:  url(./object/family.jpg) no-repeat fixed center top;
+      
+    }
+    /* 头部区域 */
+
+    .header {
+      height: 80px;
+      background:rgba(31, 30, 30,.7);
+      /* background-image: url(./image/move1.png); */
+      /* background-repeat: no-repeat; */
+    } 
+    /* 设置logo 大小 */
+
+    .logo {
+      float: left;
+      /* width: 179px; */
+      height: 80px;
+      /* background-color: red; */
+      margin-left: 100px; 
+    }
+    /* 导航栏，这里没用到 */
+    .nav {
+      float: left;
+      margin-left: 56px;
+      font-size: 40px;
+      margin-top: 14px;
+      color: rgb(245, 163, 10);
+      /* font-weight:80px; */
+    }
+    /* 搜索框的底盒子 */
+    .search {
+      float: left;
+      width: 800px;
+      height: 60px;
+      /* background-color: #373636; */
+      margin: 10px 50px; 
+    }
+    /* 搜索框左盒子设置大小边框 */
+    .search input {
+      float: left;
+      width: 675px;
+      height: 60px;
+      border: 1px solid #d553af;
+      border-right: 0;
+      color:rgb(238, 211, 160);
+      font-size: 25px;
+      padding-left: 15px;
+    }
+    /* 搜索 按钮 设置 */
+    .search button {
+      float: left;
+      width: 100px;
+      height: 62px;
+      /* background-color: red; */
+      border: 0;    /* 按钮设置好后，自带边框，要清除边框 */
+      background-image: url(./object/背景.jpg);
+    }
+    /* 头像，用户登录 */
+    .user {
+      float: left;
+      width: 300px;
+      height: 60px;
+      color: rgb(255, 251, 0);
+      margin-top: 10px;
+    }
+    
+    .box1,
+    .box3,
+    .box5 {
+      width: 1300px;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      margin:0 auto;
+      margin-top: 10px;
+    }
+    /* 所有的无序列表都没有小圆点 */
+    li {
+      list-style: none;
+    }
+    /* 所有的链接都没有下划线，字是白色 */
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .box1 li {
+      float: left;
+      width: 433.343px;
+      height: 70px;
+      background:rgba(31, 30, 30,.7);
+      font-size: 25px;
+    }
+    /* 当鼠标经过时，变黑色 */
+    .box1 li:hover {
+      background-color: black;
+    }
+    .box2,
+    .box4,
+    .box6 {
+      width: 1300px;
+      height: 300px;
+      /* background:rgba(214, 10, 129, 0.5); */
+      background:rgba(31, 30, 30,.7);
+      line-height: 280px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    .box2 div {
+      float: left;
+      width: 423px;
+      height: 280px;
+      /* background:rgba(214, 10, 129, 0.5); */
+      margin: 8px 5px;
+    }
+    /* 第二个盒子里的图片强制和div一样大 */
+    .box2 div img {
+      width: 423px;
+      height: 280px;
+    }
+    /* 设置是视频的大小 */
+    .box4 video {
+      width: 315px;
+      height: 280px;
+    }
+    /*  父盒子 aa盒子 */
+    .box2 .aa {
+
+      position: relative; /*相对定位 */
+      width: 423px;
+      height: 280px;
+      background-color: #fff;
+    }
+    .img1{
+            display: block;
+        }
+     .img2{
+            display: none;
+        }
+    .img3{
+            display: none;
+        }
+    .img4{
+            display: none;
+        }
+    .img5{
+            display: none;
+        }
+    
+    
+    /* 左右箭头　子绝父相 */
+    .prev,/*左右小箭头相同属性设置*/
+    .next {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      width: 20px;
+      height: 30px;
+      background-color:rgba(71, 70, 70, 0.6);
+      text-align: center;
+      line-height: 30px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .prev {
+      left: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    .next {
+      right: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    /* 下面小圆点盒子　子绝父相 */
+  .promo-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 140px;
+    height: 20px;
+    background-color: rgba(255,255,255,.3);
+    margin-left: -70px;
+    border-radius: 10px;
+  }
+  .promo-nav li {
+    float: left;
+    width: 20px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 4px;
+  }
+  /* 当前选择的颜色 */
+  .promo-nav .selected {
+    background-color: #ff5000;
+  }
+    .box2 .ab {
+      position: relative;
+      width: 423px;
+      height: 280px;
+      background-color: #fff;
+    }
+    .img6{
+            display: block;
+        }
+    .img7{
+            display: none;
+        }
+    .img8{
+            display: none;
+        }
+    .img9{
+            display: none;
+        }
+    .img10{
+            display: none;
+        }
+
+    .prev1,
+    .next1 {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      width: 20px;
+      height: 30px;
+      background-color:rgba(71, 70, 70, 0.6);
+      text-align: center;
+      line-height: 30px;
+      color: #fff;
+      text-decoration: none;
+    }
+     .prev1 {
+      left: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    .next1 {
+      right: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    .promo-nav1 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 140px;
+    height: 20px;
+    background-color: rgba(255,255,255,.3);
+    margin-left: -70px;
+    border-radius: 10px;
+  }
+  .promo-nav1 li {
+    float: left;
+    width: 20px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 4px;
+  }
+  .promo-nav1 .selected1 {
+    background-color: #ff5000;
+  }
+    .box2 .ac {
+      position: relative;
+      width: 423px;
+      height: 280px;
+      background-color: #fff;
+    }
+    .img11{
+            display: block;
+        }
+    .img12{
+            display: none;
+        }
+    .img13{
+            display: none;
+        }
+    .img14{
+            display: none;
+        }
+    .img15{
+            display: none;
+        }
+    .prev2,
+    .next2 {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      width: 20px;
+      height: 30px;
+      background-color:rgba(71, 70, 70, 0.6);
+      text-align: center;
+      line-height: 30px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .prev2 {
+      left: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    .next2 {
+      right: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+  .promo-nav2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 140px;
+    height: 20px;
+    background-color: rgba(255,255,255,.3);
+    margin-left: -70px;
+    border-radius: 10px;
+  }
+  .promo-nav2 li {
+    float: left;
+    width: 20px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 4px;
+  }
+  .promo-nav2 .selected2 {
+    background-color: #ff5000;
+  }
+   .box3 li {
+      float: left;
+      width: 325px;
+      height: 70px;
+      background:rgba(31, 30, 30,.7);
+      font-size: 25px;
+    }
+   .box3 li:hover {
+    background-color: black;
+    }
+   .box4 div {
+      position: relative;
+      float: left;
+      width: 315px;
+      height: 280px;
+      /* background:rgba(214, 10, 129, 0.5); */
+      margin: 8px 5px;
+   }
+    .box4 video {
+      width: 315px;
+      height: 280px;
+    }
+   .box4 div img {
+      width: 315px;
+      height: 280px;
+   }
+   .mask {
+      /* 隐藏遮罩层 */
+      display: none;
+      position: absolute;
+      top: 0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.4);
+    }
+   .box4:hover .mask {
+      /* 当鼠标经过时，里面的遮罩层显示出来 */
+      display: block;
+    }
+    .box4 .ad {
+      position: relative;
+      width: 315px;
+      height: 280px;
+      /* background-color: #fff; */
+    }
+    .box4 .ae {
+      position: relative;
+      width: 315px;
+      height: 280px;
+      /* background-color: #fff; */
+    }
+    .box4 .af {
+      position: relative;
+      width: 315px;
+      height: 280px;
+      /* background-color: #fff; */
+    }
+    .box4 .ag {
+      position: relative;
+      width: 315px;
+      height: 280px;
+      background-color: rgba(0,0,0,.4);
+    }
+   .small ul li {
+     float: left;
+     width: 147.5px;
+     height: 130px;
+     /* background-color:rgba(12, 66, 243,.7); */
+     margin: 5px 5px;
+     
+   }
+   .small li a {
+     color: black;
+     margin: 0;
+   }
+   .small li:hover {
+     float: left;
+     background-color: rgba(173, 46, 46, 0.6);
+   }
+   .box5 li {
+      float: left;
+      width: 325px;
+      height: 70px;
+      background:rgba(31, 30, 30,.7);
+      font-size: 25px;
+    
+   }
+   .box5 li:hover {
+    background-color: black;
+   }
+   .box6 li {
+      float: left;
+      width: 315px;
+      height: 280px;
+      /* background:rgba(214, 10, 129, 0.5); */
+      margin: 8px 5px;
+   }
+   .small2 li {
+     float: left;
+     width: 147.5px;
+     height: 130px;
+     /* background-color:rgba(12, 66, 243,.7); */
+     margin: 5px 5px;
+   }
+    .bottom {
+      height: 160px;
+      background:rgba(31, 30, 30,.3);
+      margin-top: 10px;
+    }

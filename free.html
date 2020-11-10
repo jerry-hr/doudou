@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .node {
+            margin: auto;
+            width: 1820px;
+            height: 2500px;
+            background-color: rgba(31, 30, 30,.8);
+        }
+        .node div {
+            width: 1820px;
+            height: 500px;
+           
+
+        }
+        .node ul li{
+            float: left;
+            margin-left:110px;
+            margin-top: 30px;
+          
+        }
+        
+        .node ul li:hover {
+            transform:scale(1.2);
+        }
+        .node span div{
+            width: 223px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+            background-color:rgba(31, 30, 30,.3);
+        }
+        a {
+            text-decoration: none;
+            color:white;
+        }
+        .header {
+            height: 80px;
+            /* background:rgba(31, 30, 30,.7); */
+            /* background-image: url(./image/move1.png); */
+            /* background-repeat: no-repeat; */
+        }
+
+        /* 设置logo 大小 */
+
+        .logo {
+            float: left;
+            /* width: 179px; */
+            height: 80px;
+            /* background-color: red; */
+            margin-left: 100px;
+        }
+
+        /* 导航栏，这里没用到 */
+        .nav {
+            float: left;
+            margin-left: 56px;
+            font-size: 40px;
+            margin-top: 14px;
+            color: rgb(245, 163, 10);
+            /* font-weight:80px; */
+        }
+
+        /* 搜索框的底盒子 */
+        .search {
+            float: left;
+            width: 800px;
+            height: 60px;
+            /* background-color: #373636; */
+            margin: 10px 50px;
+        }
+
+        /* 搜索框左盒子设置大小边框 */
+        .search input {
+            float: left;
+            width: 675px;
+            height: 60px;
+            border: 1px solid #d553af;
+            border-right: 0;
+            color: rgb(238, 211, 160);
+            font-size: 25px;
+            padding-left: 15px;
+        }
+
+        /* 搜索 按钮 设置 */
+        .search button {
+            float: left;
+            width: 100px;
+            height: 62px;
+            background-color: red;
+            border: 0;
+            /* 按钮设置好后，自带边框，要清除边框 */
+            background-image: url(./object/背景.jpg);
+        }
+
+        /* 头像，用户登录 */
+        .user {
+            float: left;
+            width: 300px;
+            height: 60px;
+            color: rgb(255, 251, 0);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!--头部logo-->
+        <div class="logo">
+            <a href="object-movie.html"><img src="./object/mo1.png" /></a>
+        </div>
+        <!--导航栏nav-->
+        <div class="nav">
+            电影
+        </div>
+        <!-- 搜索框 search ， 按钮 button ，文本框-->
+        <div class="search">
+            <input type="text" name="label" id="la" value="输入关键词" />
+
+            <button></button>
+        </div>
+        <!-- 用户模块 --注册登录头像 -->
+        <div class="user">
+            <div style="width: 60px;float: left;"><a href="reg.html"><img src="./object/小鸭子2.png" /></a></div>
+            <div style="width: 200px;float: left;font-size: 30px;margin: 10px 20px;"></div>
+        </div>
+    </div>
+    <div class="node">
+        <div>
+            <ul>
+                <li><a href="https://v.qq.com/x/cover/om43f374meb25iu.html"><img src="../object/free01.jpg" alt=""><span><div>熊宝夺兵</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/z6j3ixjjcokafyc.html"><img src="../object/free02.jpg" alt=""><span><div>西虹市首富</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/53el1qwq1gnm5fn.html"><img src="../object/free03.jpg" alt=""><span><div>熊心归来</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/5y95zy4idzqf6hc.html"><img src="../object/free04.jpg" alt=""><span><div>捉妖记2</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/msbt3iret5tgwu8.html"><img src="../object/free05.jpg" alt=""><span><div>赌神</div></span></a></li>
+                
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://v.qq.com/x/cover/ge1vg9evjfeb6l0.html"><img src="../object/free06.jpg" alt=""><span><div>夏洛特烦恼</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/yrk9u3rwbp1gmws.html"><img src="../object/free07.jpg" alt=""><span><div>乘风破浪</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/ujnamwpqg1xg8qm.html"><img src="../object/free08.jpg" alt=""><span><div>西游降魔篇</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/5e1o97rl37tjzbt.html"><img src="../object/free09.jpg" alt=""><span><div>祖宗十九代</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/qxlvauamtoi399d.html"><img src="../object/free10.jpg" alt=""><span><div>恐龙王</div></span></a></li>
+                
+                
+                
+                
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://v.qq.com/x/cover/xg95sxi4q7zc4uo.html"><img src="../object/free11.jpg" alt=""><span><div>美人鱼</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/g2giazodwnfdjh6.html"><img src="../object/free12.jpg" alt=""><span><div>情圣</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/q8xwiu8yyxahzz8.html"><img src="../object/free13.jpg" alt=""><span><div>功夫熊猫3</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/3v5ksc6jiwskqw4.html"><img src="../object/free14.jpg" alt=""><span><div>倒霉特工熊</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/qmefcsfx2vkifaa.html"><img src="../object/free15.jpg" alt=""><span><div>功夫之王</div></span></a></li>
+               
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://v.qq.com/x/cover/9p1k8pl7kzvp5zc.html"><img src="../object/free16.jpg" alt=""><span><div>飞龙猛将</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/3o56brnhunm5bwx.html"><img src="../object/free17.jpg" alt=""><span><div>大圣归来</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/w0p8sj2lhtdup96.html"><img src="../object/free18.jpg" alt=""><span><div>甩皮鬼</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/cgeg2g3t7b8gm6l.html"><img src="../object/free19.jpg" alt=""><span><div>西游伏妖篇</div></span></a></li>
+                <li><a href="https://v.qq.com/x/cover/jnerh30ho8ghhe7.html"><img src="../object/free20.jpg" alt=""><span><div>港囧</div></span></a></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>
